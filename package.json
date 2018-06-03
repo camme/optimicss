@@ -1,6 +1,6 @@
 {
   "name": "optimicss",
-  "version": "0.3.0",
+  "version": "0.3.8",
   "description": "Server side CSS optimizer",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,10 @@
       "type" : "git",
       "url" : "https://github.com/camme/optimicss"
   },
+  "keywords": [
+    "css",
+    "criticalpath"
+  ],
   "dependencies": {
     "lru-cache": "4.1.3",
     "md5.js": "1.3.4",
