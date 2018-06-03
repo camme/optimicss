@@ -1,0 +1,23 @@
+body {
+    padding: 20rem;
+}
+
+.foo {
+    background-color: red;
+}
+
+.bar {
+    color: lime;
+}
+
+.datamaskin {
+    font-family: serif;
+}
+
+.tjena {
+    color: black;
+}
+
+.tjena--hej {
+    color: yellow;
+}
