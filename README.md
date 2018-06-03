@@ -3,7 +3,9 @@
 A simple css optimizer that takes in your html and your complete css and returns onyl the CSS content that existed in the HTML.
 Since that might not be enough, you can also send in a whitelist with wildcards.
 
-## Simple example
+## How to use it
+
+Simple example:
 
 ```
 const optimicss = require('optimicss');
@@ -31,7 +33,7 @@ run();
 
 ```
 
-## Example with whitelist
+Example with whitelist:
 
 ```
 const optimicss = require('optimicss');
@@ -58,3 +60,17 @@ async function run () {
 run();
 
 ```
+
+
+## Options
+
+```
+let opmizedCss = await optimicss({
+    html: 'YOUR HTML STRING',   // Your pages HTML
+    css: 'YOUR COMPLETE CSS',   // Your complete CSS including everything
+    whitelist: ['.foo*'].       // An array of strings with optional wildcards to include no matter what,
+    cache: true,                // Use your HTML and the whitelist as a key to cache the result for the next time. 
+                                // Defaults to true
+});
+```
+
