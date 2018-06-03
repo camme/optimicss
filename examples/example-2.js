@@ -15,7 +15,7 @@ const html = `<!DOCTYPE html>
 </html>`;
 
 async function run () {
-    let opmizedCss = await optimicss({html, css, whitelist: ['.tjena*']});
+    let opmizedCss = await optimicss({html, css, include: ['.tjena*']});
     console.log(opmizedCss);
 }
 
