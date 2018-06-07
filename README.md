@@ -1,7 +1,7 @@
 # Optimicss
 
 A simple css optimizer that takes in your html and your complete css and returns onyl the CSS content that existed in the HTML.
-Since that might not be enough, you can also send in a whitelist with wildcards.
+Since that might not be enough, you can also send in a include with wildcards.
 
 ## How to use it
 
@@ -33,7 +33,7 @@ run();
 
 ```
 
-Example with whitelist:
+Example with include:
 
 ```
 const optimicss = require('optimicss');
@@ -53,7 +53,7 @@ const html = `<!DOCTYPE html>
 </html>`;
 
 async function run () {
-    let opmizedCss = await optimicss({html, css, whitelist: ['.tjena*']});
+    let opmizedCss = await optimicss({html, css, include: ['.tjena*']});
     console.log(opmizedCss);
 }
 
@@ -68,8 +68,8 @@ run();
 let opmizedCss = await optimicss({
     html: 'YOUR HTML STRING',   // Your pages HTML
     css: 'YOUR COMPLETE CSS',   // Your complete CSS including everything
-    whitelist: ['.foo*'].       // An array of strings with optional wildcards to include no matter what,
-    cache: true,                // Use your HTML and the whitelist as a key to cache the result for the next time. 
+    include: ['.foo*'].       // An array of strings with optional wildcards to include no matter what,
+    cache: true,                // Use your HTML and the include as a key to cache the result for the next time. 
                                 // Defaults to true
 });
 ```

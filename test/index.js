@@ -20,13 +20,13 @@ async function run () {
 
     //console.log('-------------------------------');
     console.time('css2');
-    let opmizedCssWithWhitelist = await optimicss({html, css, whitelist: ['.tjena*']});
+    let opmizedCssWithWhitelist = await optimicss({html, css, include: ['.tjena*']});
     console.timeEnd('css2');
     //console.log(opmizedCssWithWhitelist);
 
     //console.log('-------------------------------');
     console.time('css3');
-    let opmizedCssWithWhitelistWithCache = await optimicss({html, css, whitelist: ['.tjena*']});
+    let opmizedCssWithWhitelistWithCache = await optimicss({html, css, include: ['.tjena*']});
     console.timeEnd('css3');
     //console.log(opmizedCssWithWhitelistWithCache);
 
